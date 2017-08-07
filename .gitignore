@@ -1,0 +1,12 @@
+public
+apps/*/translations/*
+!apps/*/translations/src
+.idea
+node_modules
+acceptance_tests/screenshots
+/npm-debug.log
+var/log/nodejs/*.log
+var/log/nodejs/*.log.*
+.nyc_output
+.DS_Store
+**/.DS_Store

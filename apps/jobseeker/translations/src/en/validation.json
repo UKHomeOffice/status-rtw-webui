@@ -1,0 +1,19 @@
+{
+  "brp": {
+    "required": "BRP number can't be empty",
+    "maxlength": "Check your Biometric Residence Permit (BRP) number is correct",
+    "minlength": "Check your Biometric Residence Permit (BRP) number is correct"
+  },
+  "dob": {
+    "required": "Enter your date of birth as written on your BRP card",
+    "date": "Enter your date of birth as written on your BRP card",
+    "before": "Enter your date of birth as written on your BRP card"
+  },
+  "nationality": {
+    "required": "Enter your Country of Nationality"
+  },
+  "employer-email": {
+    "required": "Enter an employer's email address",
+    "email": "Enter a valid email address"
+  }
+}

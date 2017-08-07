@@ -1,0 +1,37 @@
+{
+  "start": {
+    "heading": "Prove your right to work to an employer",
+    "info": "This service should only be used by:<ul class='list list-bullet'><li>organisations who have been invited to take part in our trial</li><li>people working for or applying for jobs with those organisations</li></ul><p>This service does not currently provide proof of immigration status - you will still need to show your BRP card to an employer.</p><p>Use this service to:</p><ul class='list list-bullet'> <li>view if you can work in the UK and what work you are allowed to do</li> <li>give permission to an employer to view your name, photo and the work you are allowed to do in the UK</li><li>manage who you have given permission to view your information</li></ul>",
+    "panel": "You will need a <a href='https://www.gov.uk/biometric-residence-permits'>Biometric Residence Permit (BRP)</a> to use this service.",
+    "before-heading": "Before you start",
+    "privacy": "By using this service, we will use your data as described in our <a href='../../../view/privacy'>privacy policy</a>."
+  },
+  "privacy": {
+    "heading": "Prove your right to work to an employer",
+    "info": "Use this service to share your visa information to prove what work you’re allowed to do in the UK. You may need to do this when you apply for a job or renew your visa.",
+    "before-heading": "Before you start",
+    "before-info": "You will need your Biometric Residence Permit (BRP) number.<p>By using this service, we will use your data as described in our <a href='../../../view/privacy'>privacy policy</a>."
+  },
+  "brp": {
+    "label": " ",
+    "hint": "For example, RE1234567"
+  },
+  "authenticate": {
+    "label": "Ignore this field and move to the next question"
+  },
+  "dob": {
+    "hint": "For example, 31 3 1980"
+  },
+  "nationality": {
+    "label": "Country of Nationality"
+  },
+  "employer-email": {
+    "label": "Employer's email address"
+  },
+  "email-sent": {
+    "heading": "Email sent",
+    "email-sent": "We have sent an email with a code in it to {{values.employer-email}}.",
+    "next-heading": "What happens next",
+    "next-body": "For security, they will need to use this code and your Biometric Residence Permit (BRP) number to access your right to work information."
+  }
+}

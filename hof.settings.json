@@ -1,0 +1,11 @@
+{
+  "theme": "govuk",
+  "routes": [
+    "./apps/default",
+    "./apps/employer",
+    "./apps/jobseeker"
+  ],
+  "session": {
+    "name": "rtw-admin.hof.sid"
+  }
+}

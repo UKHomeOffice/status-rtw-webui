@@ -1,0 +1,1 @@
+{{with printf "%s" (env "EBSA_ROOT_CA_CERT") | secret}}{{.Data.value}}{{end}}

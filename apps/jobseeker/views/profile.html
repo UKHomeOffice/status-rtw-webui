@@ -1,0 +1,452 @@
+{{<partials-page-large}}
+{{$headerClasses}}visually-hidden{{/headerClasses}}
+{{$page-content}}
+
+
+<div class="column-full no-padding">
+    <div class="profile-summary">
+        <div class="hod-status-block">
+            {{#values.statusData.photo}}
+            <div class="column-one-third">
+                <img class="profile-image" src="{{values.statusData.photo}}"
+                     alt="Photograph of job applicant" />
+            </div>
+            {{/values.statusData.photo}}
+            {{^values.statusData.photo}}
+            <div class="column-one-third">
+                <img class="profile-image" src="../../public/images/silhouette.png"
+                     alt="Placeholder image – no photograph available" />
+            </div>
+            {{/values.statusData.photo}}
+            <div class="column-two-thirds">
+                <h2 class="heading-large">{{statusData.fullName}}</h2>
+                <div class="block-space">
+                    <div class="hod-status-block">
+                        <div class="content">
+                            {{#values.statusData.EXCEPTION_VOID}}
+                                <p class="lede">We can’t show your record</p>
+                                <p>Contact the Home Office to find out what to do next:</p>
+                                <p>[Special cases team contact details]</p>
+                            {{/values.statusData.EXCEPTION_VOID}}
+
+                            {{#values.statusData.EXCEPTION_CONDITIONS}}
+                                <p class="lede">We can’t show your record</p>
+                                <p>Contact the Home Office to find out what to do next:</p>
+                                <p>[Special cases team contact details]</p>
+                            {{/values.statusData.EXCEPTION_CONDITIONS}}
+
+                            {{#values.statusData.EXCEPTION_LONGRES}}
+                                <p class="lede">We can’t show your record</p>
+                                <p>Contact the Home Office to find out what to do next:</p>
+                                <p>[Special cases team contact details]</p>
+                            {{/values.statusData.EXCEPTION_LONGRES}}
+
+                            {{#values.statusData.EXCEPTION_RDL}}
+                                <p class="lede">We can’t show your record</p>
+                                <p>Contact the Home Office to find out what to do next:</p>
+                                <p>[Special cases team contact details]</p>
+                            {{/values.statusData.EXCEPTION_RDL}}
+
+                            {{#values.statusData.NO_WORK}}
+                                <p class="lede">You are not allowed to work in the UK</p>
+                            {{/values.statusData.NO_WORK}}
+
+
+                            {{#values.statusData.WORK_UNRES_ILR}}
+                                <p class="lede">You can work in the UK</p>
+                                <h3 class="heading-small">Details</h3>
+                                <p>There is no limit on how long you can be in the UK.</p>
+                            {{/values.statusData.WORK_UNRES_ILR}}
+
+
+                            {{#values.statusData.WORK_UNRES_TL}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+                            {{/values.statusData.WORK_UNRES_TL}}
+
+
+                            {{#values.statusData.WORK_RES_NO_DR}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+                                <h3 class="heading-small">Details</h3>
+                                On your current visa, you cannot work as a doctor or dentist in training.
+                            {{/values.statusData.WORK_RES_NO_DR}}
+
+
+                            {{#values.statusData.WORK_RES_NO_SPORTS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+                                <h3 class="heading-small">Details</h3>
+                                On your current visa, you cannot play or coach professional sports.
+                            {{/values.statusData.WORK_RES_NO_SPORTS}}
+
+
+                            {{#values.statusData.WORK_RES_NO_DR_SPORTS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you cannot:</p>
+
+                                <ul class="list list-bullet">
+                                    <li>work as a doctor or dentist in training</li>
+                                    <li>play or coach professional sports</li>
+                                </ul>
+                            {{/values.statusData.WORK_RES_NO_DR_SPORTS}}
+
+
+                            {{#values.statusData.WORK_RES_STU_10_HRS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can work:
+
+                                <ul class="list list-bullet">
+                                    <li>part time (up to 10 hours a week) during term time</li>
+                                    <li>full time in the holidays</li>
+                                </ul>
+
+                                <p>You cannot:
+
+                                <ul class="list list-bullet">
+                                    <li>work as a doctor or dentist in training – except on a recognised foundation course
+                                    </li>
+                                    <li>work as an entertainer</li>
+                                    <li>play or coach professional sports</li>
+                                    <li>engage in business activity, such as being self-employed or running a business</li>
+                                </ul>
+
+                                <p>You will need to show an employer proof of your term dates, for example a letter from your
+                                college or university.
+
+                                <p></p>Read <a href="https://www.gov.uk/government/publications/guidance-on-application-for-uk-visa-as-tier-4-student">the
+                                full guidance</a> for information on volunteering, work placements and working as a student
+                                sabbatical officer.
+                            {{/values.statusData.WORK_RES_STU_10_HRS}}
+
+
+                            {{#values.statusData.WORK_RES_STU_20_HRS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can work:
+
+                                <ul class="list list-bullet">
+                                    <li>part time (up to 20 hours a week) during term time</li>
+                                    <li>full time in the holidays</li>
+                                </ul>
+
+                                <p>You cannot:
+
+                                <ul class="list list-bullet">
+                                    <li>work as a doctor or dentist in training – except on a recognised foundation course
+                                    </li>
+                                    <li>work as an entertainer</li>
+                                    <li>play or coach professional sports</li>
+                                    <li>engage in business activity, such as being self-employed or running a business</li>
+                                </ul>
+
+                                <p>You will need to show an employer proof of your term dates, for example a letter from your
+                                college or university.
+
+                                <p>Read <a href="https://www.gov.uk/government/publications/guidance-on-application-for-uk-visa-as-tier-4-student">the
+                                full guidance</a> for information on volunteering, work placements and working as a student
+                                sabbatical officer.
+                            {{/values.statusData.WORK_RES_STU_20_HRS}}
+
+
+                            {{#values.statusData.WORK_RES_STU_DES}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can work:
+
+                                <ul class="list list-bullet">
+                                    <li>part time (up to 20 hours a week) during term time</li>
+                                    <li>full time in the holidays</li>
+                                </ul>
+
+                                <p>You cannot:
+
+                                <ul class="list list-bullet">
+                                    <li>work as a doctor or dentist in training – except on a recognised foundation course
+                                    </li>
+                                    <li>work as an entertainer</li>
+                                    <li>play or coach professional sports</li>
+                                    <li>engage in business activity, such as being self-employed or running a business</li>
+                                </ul>
+
+                                <p>You will need to show an employer proof of your term dates, for example a letter from your
+                                college or university.
+
+                                    <details role="group">
+                                        <summary role="button" aria-controls="details-content-0" aria-expanded="false">When you finish your course</summary>
+                                        <div class="panel panel-border" id="details-content-0" aria-hidden="true">
+                            <p>You can work in most jobs after you successfully complete your course, but you still cannot:
+
+                            <ul class="list list-bullet">
+                                <li>work as a doctor or dentist in training</li>
+                                <li>play or coach professional sports</li>
+                            </ul>
+
+                            <p>Read <a href="https://www.gov.uk/government/publications/guidance-on-application-for-uk-visa-as-tier-4-student">the
+                                full guidance</a> for more information.</p>
+                                </div>
+                                </details>
+
+                            {{/values.statusData.WORK_RES_STU_DES}}
+
+
+                            {{#values.statusData.WORK_RES_SELF}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can only work for your own business while you are in the UK.
+                            {{/values.statusData.WORK_RES_SELF}}
+
+
+                            {{#values.statusData.WORK_RES_SELF_NO_DR}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can only work for your own business while you are in the UK.
+
+                                <p>You cannot work as a doctor or dentist in training.
+                            {{/values.statusData.WORK_RES_SELF_NO_DR}}
+
+
+                            {{#values.statusData.WORK_RES_SELF_NO_SPORTS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can only work for your own business while you are in the UK.
+
+                                <p>You cannot play or coach professional sports.
+                            {{/values.statusData.WORK_RES_SELF_NO_SPORTS}}
+
+
+                            {{#values.statusData.WORK_RES_SELF_NO_DR_SPORTS}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can only work for your own business while you are in the UK.
+
+                                <p>You cannot:
+
+                                <ul class="list list-bullet">
+                                    <li>work as a doctor or dentist in training</li>
+                                    <li>play or coach professional sports</li>
+                                </ul>
+                            {{/values.statusData.WORK_RES_SELF_NO_DR_SPORTS}}
+
+
+                            {{#values.statusData.WORK_RES_SPON_SGL}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you must work for your sponsor while you are in the UK.
+
+                                <p>You can also work in a part time job (up to 20 hours a week) if it is one of the following:
+
+                                <ul class="list list-bullet">
+                                    <li>the same role as your current job</li>
+                                    <li>on <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-k-shortage-occupation-list">the
+                                        shortage occupation list</a></li>
+                                </ul>
+
+                                <p>Your part time job must be outside the hours you work for your sponsor.
+                            {{/values.statusData.WORK_RES_SPON_SGL}}
+
+
+                            {{#values.statusData.WORK_RES_SPON_DBL}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you must work for your sponsors while you are in the UK.
+
+                                <p>You can also work in a part time job (up to 20 hours a week) if it is one of the following:
+
+                                <ul class="list list-bullet">
+                                    <li>the same role as one of your current jobs
+                                    <li>on <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-k-shortage-occupation-list">the
+                                        shortage occupation list</a></li>
+                                </ul>
+
+                                <p>Your part time job must be outside the hours you work for your sponsors.
+                            {{/values.statusData.WORK_RES_SPON_DBL}}
+
+
+                            {{#values.statusData.WORK_RES_EMBASSY}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>You can only work for a foreign embassy while you are in the UK.
+                            {{/values.statusData.WORK_RES_EMBASSY}}
+
+
+                            {{#values.statusData.WORK_RES_FORCES}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>You can only work for a foreign armed forces while you are training in the UK.
+                            {{/values.statusData.WORK_RES_FORCES}}
+
+
+                            {{#values.statusData.WORK_RES_FORCES_BASE}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>You can only work on a military base for a foreign armed forces while you are in the UK.
+                            {{/values.statusData.WORK_RES_FORCES_BASE}}
+
+
+                            {{#values.statusData.WORK_RES_ORG}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>You can only work for the employer written on your card while you are in the UK.
+                            {{/values.statusData.WORK_RES_ORG}}
+
+
+                            {{#values.statusData.WORK_RES_SECTOR}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>On your current visa, you can only work in the occupation sector written on your card while you are in the UK.
+                            {{/values.statusData.WORK_RES_SECTOR}}
+
+
+                            {{#values.statusData.WORK_RES_OFFSHORE}}
+                                <p class="lede">You can work in the UK until {{validUntilDisplay}}</p>
+
+                                {{#values.statusData.isCurtailed}}
+                                    {{>partials-curtailment-message}}
+                                {{/values.statusData.isCurtailed}}
+
+                                <h3 class="heading-small">Details</h3>
+                                <p>You can only work off-shore on the UK Continental Shelf (UKCS).</p>
+                            {{/values.statusData.WORK_RES_OFFSHORE}}
+
+                            {{#values.statusData.LEAVE_EXPIRED}}
+                                <div class="block-space">
+                                    <div class="hod-status-block">
+                                        <div class="notice">
+                                            <i class="icon icon-important">
+                                                <span class="visually-hidden">Warning</span>
+                                            </i>
+                                            <strong class="bold-medium">
+                                                You are not allowed to work in the UK
+                                            </strong>
+                                        </div>
+                                    </div>
+                                <p>Your leave has been shortened and you are no longer able to work in the UK. </p>
+                                <p>If you have already applied to extend your leave, ask your employer to use the <a href="https://www.gov.uk/employee-immigration-employment-status">Employer Checking Service</a> to prove your right to work.</p>
+                                <p>Otherwise you can <a href="https://www.gov.uk/return-home-voluntarily">get help to return home.</a></p>
+                                </div>
+                            {{/values.statusData.LEAVE_EXPIRED}}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{{^values.statusData.hideShareButton}}
+<input class="button" type="submit" value="{{#t}}buttons.share{{/t}}">
+{{/values.statusData.hideShareButton}}
+</div>
+
+
+{{^values.statusData.photo}}
+<div class="column-two-thirds">
+    <div class="block-space">
+        <details role="group">
+            <summary role="button" aria-controls="details-content-1" aria-expanded="false">Why is my photograph not showing?</summary>
+            <div class="panel panel-border-narrow" id="details-content-1" aria-hidden="true">
+                <p>This service is in development, so photographs will not always be available.</p>
+            </div>
+        </details>
+    </div>
+</div>
+{{/values.statusData.photo}}
+
+<div class="column-two-thirds">
+    <div class="block-space">
+        <details role="group">
+            <summary role="button" aria-controls="details-content-2" aria-expanded="false">If your details are wrong</summary>
+            <div class="panel panel-border-narrow" id="details-content-2" aria-hidden="true">
+                <p>Your details are taken from your Biometric Residence Permit (BRP). If something is wrong, such as the spelling of your name, you need to <a href="https://www.gov.uk/biometric-residence-permits/report-problem">report a problem with your BRP</a>.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="column-two-thirds no-padding block-space">
+    <a class="button-secondary" href="../">Finish and leave service</a>
+</div>
+{{/page-content}}
+{{/partials-page-large}}
+

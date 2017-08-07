@@ -1,0 +1,14 @@
+{{<partials-page}}
+{{$page-content}}
+
+<div class="block-space" style="margin-bottom: 20px;">
+    {{#input-text}}employer-email{{/input-text}}
+    <input class="button" type="submit" value="{{#t}}buttons.continue{{/t}}">
+</div>
+
+<div>
+    <a href="{{baseUrl}}/create-security-code">I don't know their email address</a>
+</div>
+
+{{/page-content}}
+{{/partials-page}}

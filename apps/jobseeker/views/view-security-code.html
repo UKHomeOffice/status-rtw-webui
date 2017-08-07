@@ -1,0 +1,51 @@
+{{<partials-page}}
+{{$page-content}}
+
+    <div>
+        <h2 class="heading-large">Share your work information without an email address</h2>
+
+        <div class="no-print">
+            <p class="text">You can create a security code to give to an employer so they can view your right to work information.</p>
+        </div>
+
+        <div id="code-block2">
+
+            <span class="heading-small">Give this code to the employer:</span>
+
+            <p class="access-code">{{values.shareData.shareCode}}</p>
+
+            <span class="heading-medium">What to do with this code</span>
+
+            <ol class="spaced-text">
+                <li class="number-list-group">
+                    <span class="circle circle-step number-list-align">1</span>
+                    Give this code and your BRP number to the employer you want to share your work information with.
+                </li>
+            </ol>
+            <ol class="spaced-text">
+                <li class="number-list-group">
+                    <span class="circle circle-step number-list-align">2</span>
+                    They will need to go to <a href="/check/start">/check/start</a> or call
+                    <span class="heading-small">03333 445 675</span> if they need help to do the online check.
+                </li>
+            </ol>
+
+            <p>The code lasts for 30 days.</p>
+
+        </div>
+
+        <div>
+            <a class="button" href="../">Finish</a>
+        </div>
+
+        <div class="spaced-text">
+            <a href="#" onclick="window.print();return false;">Print this page</a>
+        </div>
+        <div class="spaced">
+            <a href="{{baseUrl}}/share-email">Share with another employer</a>
+        </div>
+
+    </div>
+
+{{/page-content}}
+{{/partials-page}}

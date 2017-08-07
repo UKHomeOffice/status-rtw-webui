@@ -1,0 +1,6 @@
+FROM quay.io/ukhomeofficedigital/rtw-ui-acceptance:1.0
+
+COPY acceptance_tests /code
+WORKDIR /code
+VOLUME /reports
+ENTRYPOINT ["cucumber",  "--format", "pretty", "--format",  "html",  "--out", "/reports/reports.html"]

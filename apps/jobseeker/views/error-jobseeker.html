@@ -1,0 +1,85 @@
+{{<partials-page}}
+{{$headerClasses}}hidden{{/headerClasses}}
+{{$page-content}}
+
+
+{{^errorObj}}
+<h1 class="heading-large">An error has occurred</h1>
+<p>There is a problem displaying this page - try again in a few minutes.</p>
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+{{/errorObj}}
+
+{{#errorObj.sharefailed}}
+<h1 class="heading-large">An error has occurred</h1>
+<p>There is a problem displaying this page - try again in a few minutes.</p>
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+{{/errorObj.sharefailed}}
+
+{{#errorObj.authenticate}}
+<h1 class="heading-large">An error has occurred</h1>
+<p>There is a problem displaying this page - try again in a few minutes.</p>
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+{{/errorObj.authenticate}}
+
+{{#errorObj.cantfind}}
+<h1 class="heading-large">We can't find your record</h1>
+<p>This could be because the details you entered are from an old Biometric Residence Permit (BRP) or don't match our records.</p>
+<p>Check your BRP is valid and you entered your details exactly as they appear on your card.</p>
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+<h3 class="heading-medium">If the details match your BRP</h3>
+<p>This is a trial service. Contact the service team to report a problem.</p>
+<p>Email: <a href="mailto:right-to-work-trial@digital.homeoffice.gov.uk">right-to-work-trial@digital.homeoffice.gov.uk</a></p>
+{{/errorObj.cantfind}}
+
+
+{{#errorObj.dontmatch}}
+<h1 class="heading-large">The details entered don't match our records</h1>
+<div class="panel panel-border-narrow">
+    <h2 class="heading-small">Biometric Residence Permit (BRP) number</h2>
+    <p>{{errorDetails.brp}}</p>
+    <h2 class="heading-small">Date of birth</h2>
+    <p>{{errorDetails.dob}}</p>
+</div>
+<p>Make sure you enter your details exactly as they appear on your BRP.</p>
+<p><a class="button" href="/view">Start again</a></p>
+{{/errorObj.dontmatch}}
+
+{{#errorObj.notvalid}}
+<h1 class="heading-large">Your BRP is not valid</h1>
+
+<p>This might be because it has:</p>
+<ul class="list-bullet">
+    <li>expired</li>
+    <li>been reported lost or stolen</li>
+</ul>
+<p class="block-space">You must use your current BRP to access this service.</p>
+
+<p class="block-space"> If your leave itself has expired and you are currently in the country, you can
+    <a href="https://www.gov.uk/return-home-voluntarily">get help to return home.</a></p>
+
+<p class="block-space">If you have already applied to extend your leave, ask your employer to use the
+    <a href="https://www.gov.uk/employee-immigration-employment-status">Employer Checking Service</a> to prove your right to work.</p>
+
+<p class="block-space"><a class="button" href="/view">Start again</a></p>
+{{/errorObj.notvalid}}
+
+
+{{#errorObj.attemptsLockout}}
+<h1 class="heading-large">Too many incorrect attempts</h1>
+<p>You entered incorrect details 5 times in a row.</p>
+<p>Wait 15 minutes before you try again.</p>
+<p><a href="https://www.gov.uk/">Back to GOV.UK</a></p>
+{{/errorObj.attemptsLockout}}
+
+
+
+{{#errorObj.specialCases}}
+<h1 class="heading-large">We can't show your record</h1>
+<p>Contact the Home Office to find out what to do next:</p>
+<p>Email: <a href="mailto:RTW-Check@homeoffice.gsi.gov.uk">RTW-Check@homeoffice.gsi.gov.uk</a></p>
+<p><a href="https://www.gov.uk/">Back to GOV.UK</a></p>
+{{/errorObj.specialCases}}
+
+
+{{/page-content}}
+{{/partials-page}}

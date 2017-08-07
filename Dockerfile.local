@@ -1,0 +1,30 @@
+FROM quay.io/ukhomeofficedigital/nodejs-base:v6.9.1
+
+COPY . /app
+
+RUN cd $(npm root -g)/npm && \
+  npm install fs-extra && \
+  sed -i -e s/graceful-fs/fs-extra/ -e s/fs.rename/fs.move/ ./lib/utils/rename.js && \
+  yum clean all && \
+  yum update -y && \
+  yum install -y epel-release && \
+  yum install -y wget nginx unzip initscripts && \
+  yum clean all && \
+  rm -rf /var/cache/yum && \
+  rpm --rebuilddb && \
+  npm install -g npm@latest --loglevel warn && \
+  mkdir /public && \
+  mkdir /var/log/nodejs && \
+  chown -R root:root /var/log/nodejs && \
+  chown -R nodejs:nodejs /app && \
+  chmod +x /app/docker-entrypoint.sh
+
+CMD cd /app
+
+RUN npm rebuild node-sass --force &&  \
+    npm run build
+
+# start npm as nodejs
+
+CMD su nodejs -s /bin/sh -c 'npm start'
+

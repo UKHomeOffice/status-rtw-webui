@@ -1,0 +1,22 @@
+{
+  "applicant-brp": {
+    "required": "Enter the BRP number on the job applicant's card, for example RE1234567",
+    "maxlength": "Enter the BRP number on the job applicant's card, for example RE1234567",
+    "minlength": "Enter the BRP number on the job applicant's card, for example RE1234567"
+  },
+  "access-code": {
+    "required": "Enter the security code from your email",
+    "maxlength": "Enter the security code from your email",
+    "minlength": "Enter the security code from your email"
+  },
+  "employer-email": {
+    "required": "Enter an employer's email address",
+    "email": "Enter a valid email address"
+  },
+  "employee-name": {
+    "required": "Enter your name"
+  },
+  "company-name": {
+    "required": "Enter your company's name"
+  }
+}

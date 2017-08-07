@@ -1,0 +1,37 @@
+{{<govuk-template}}
+  {{$head}}
+    {{> partials-head}}
+  {{/head}}
+  {{$pageTitle}}
+    {{$header}}{{/header}} &ndash; GOV.UK
+  {{/pageTitle}}
+  {{$headerClass}}with-proposition{{/headerClass}}
+  {{$insideHeader}}{{/insideHeader}}
+  {{$main}}
+    <main class="main" role="main">
+      {{> partials-phase-banner}}
+      <span id="step">
+        {{> partials-back}} <span>{{$step}}{{/step}}</span>
+      </span>
+      <div class="grid-row" id="content">
+        {{> partials-maincontent-left}}
+      </div>
+      {{> partials-gatag}}
+      <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
+    </main>
+  {{/main}}
+  {{$cookieMessage}}
+    <p>
+      {{#t}}cookies.banner.message{{/t}}
+      <a href="/cookies">{{#t}}cookies.banner.link{{/t}}</a>
+    </p>
+  {{/cookieMessage}}
+  {{$footerSupportLinks}}
+    <ul>
+      <li><a href="/view/privacy">{{#t}}ui.privacy{{/t}}</a></li>
+      <li><a href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
+      <li><a href="/terms-and-conditions">{{#t}}base.terms{{/t}}</a></li>
+    </ul>
+  {{/footerSupportLinks}}
+  {{$bodyEnd}}{{/bodyEnd}}
+{{/govuk-template}}

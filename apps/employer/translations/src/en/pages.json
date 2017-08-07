@@ -1,0 +1,21 @@
+{
+  "start": {
+    "header": "Check a job applicant's right to work in the UK"
+  },
+  "error": {
+    "header": "An error has occurred"
+  },
+  "applicant-details": {
+    "header": "Job applicant’s details"
+  },
+  "company-details": {
+    "header": "Your details"
+  },
+  "profile": {
+    "header": "Right to Work status"
+  },
+  "privacy": {
+    "header": "Privacy policy"
+  }
+}
+

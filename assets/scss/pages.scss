@@ -1,0 +1,153 @@
+
+
+// styles for profile page
+.profile-image {
+  max-width: 220px;
+}
+.profile-summary {
+  width: 100%;
+  border: 1px solid #bfc1c3;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hod-status-block:first-child, .hod-status-block h2, h2 {
+  margin-top: 0.5em;
+}
+
+.hod-status-block img {
+  max-width: 100%;
+  text-align: center;
+  margin-top: 18px;
+  padding: 0 10px 20px 0;
+}
+
+.block-space {
+  margin: 10px 0;
+}
+
+// end of styles for profile
+
+
+
+.form-group {
+  margin-bottom: 0; }
+@media (min-width: 641px) {
+  .form-group {
+    margin-bottom: 0; } }
+
+input[value="Continue"].button {
+  margin-top: 30px;
+}
+
+
+// styles for employer email address confirmation page
+
+.confirmation-summary-step {
+  border: 4px solid $green;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  padding: $gutter-half 10px;
+  word-wrap: break-word;
+
+  p {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+  @media screen and (max-width: 640px ) {
+    p {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  @include media(tablet) {
+    border: 5px solid $green;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding: $gutter-two-thirds $gutter-half $gutter-half;
+  }
+
+  @include ie-lte(6) {
+    zoom: 1;
+  }
+
+  .confirmation-summary-heading {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .confirmation-summary-list {
+    padding-left: 0;
+    padding-top: 15px;
+
+    li {
+      @include media(tablet) {
+        margin-bottom: 5px;
+      }
+    }
+    a {
+      color: $text-colour;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+// end of styles for employer email address confirmation page
+
+
+
+// styles for access code sharing
+
+.number-list-align {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.access-code {
+  letter-spacing: .175em;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.spaced-text {
+  margin: 25px 0;
+}
+
+circle-step {
+  height: 100%;
+}
+
+.circle {
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #0b0c0c;
+  color: #fff;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+// end of styles for access code sharing
+
+#access-code-group, #company-name-group, .block-space {
+  margin-top: 1.5em;
+}
+
+#authenticate-group {
+  display: none;
+}

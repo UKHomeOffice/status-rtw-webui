@@ -1,0 +1,147 @@
+.float-left {
+  float:left;
+}
+.float-right {
+  float:right;
+}
+
+.phase-banner {
+  @include phase-banner();
+  width:100%;
+  display:inline-block;
+  .float-right {
+    span {
+      font-size: 16px;
+      padding-top: 2px;
+      font-weight: bold;
+    }
+  }
+}
+
+.grid-row > .column-two-thirds {
+  padding-left: 0;
+}
+
+.no-js-hidden {
+  display: none;
+}
+
+.button-secondary {
+  @include button($panel-colour);
+  box-shadow: 0 1px 0 $black;
+  border: $black 1px solid;
+  &[disabled]:active {
+    box-shadow: 0 0px 0 $black;
+  }
+}
+
+// Back link styles - with left pointing arrow
+#step > a {
+  position: relative;
+
+  @include core-16;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  padding-left: 14px;
+
+  color: $black;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $black;
+  }
+
+  text-decoration: none;
+  border-bottom: 1px solid $black;
+
+  // Back arrow - left pointing black arrow
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-top: 5px solid transparent;
+    border-right: 6px solid $text-colour;
+    border-bottom: 5px solid transparent;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+  }
+
+  // Fallback
+  // IE8 doesn't support rgba and only supports the single colon syntax for :before
+  // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
+  // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
+  @include ie-lte(8) {
+    background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+  }
+}
+
+// tweak for error styles in the dob fields
+fieldset.validation-error > legend {
+  float: left;
+}
+
+fieldset.validation-error > .form-group.form-date {
+  clear: both;
+  margin-bottom: 0;
+}
+
+fieldset.validation-error::after {
+  border-left: none;
+}
+
+div#nationality-group {
+  margin-top: 20px;
+}
+
+.validation-summary a {
+  color: $red;
+}
+
+// icon for start button
+.button-start, .button-get-started {
+  background-image: url("../images/icon-pointer.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .button-start,
+  .button-get-started {
+    background-image: url("../images/icon-pointer-2x.png");
+  } }
+
+.icon-important {
+  width: 35px;
+  height: 35px;
+  background-image: url("/public/images/icon-important.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .icon-important {
+    background-image: url("/public/images/icon-important-2x.png");
+    background-size: 100%;
+  }
+}
+
+#nationality-group > label {
+  font-weight: bold;
+}
+#brp-group > label {
+  font-weight: bold;
+}
+
+#content {
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 30px;
+  outline: none;
+}
+
+.no-padding {
+  padding: 0;
+}

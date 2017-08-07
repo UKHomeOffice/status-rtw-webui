@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+gem 'cucumber'
+gem 'capybara'
+gem 'poltergeist'
+gem 'phantomjs', '~> 2'
+gem 'rspec'
+gem 'show_me_the_cookies'
+gem 'yard-cucumber'
+gem 'selenium-webdriver', '2.45.0'
+gem 'sinatra'
+gem 'rest-client'
+gem 'dumb_delegator', '~> 0.8.0'
+gem 'axe-matchers'

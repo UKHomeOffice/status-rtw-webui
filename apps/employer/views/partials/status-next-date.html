@@ -1,0 +1,58 @@
+<hr>
+<h2 class="heading-medium">What happens next</h2>
+<p class="text">We will keep a record you made this check.</p>
+<details role="group">
+    <summary role="button" aria-controls="details-content-0" aria-expanded="false">If you employ this person</summary>
+    <div class="panel panel-border" id="details-content-0" aria-hidden="true">
+        <p>You must:</p>
+        <ul class="list list-bullet">
+
+            <li>keep a copy of their original document and record the date you checked it</li>
+            <li>do this check again when their current visa expires on {{validUntilDisplay}}</li>
+        </ul>
+    </div>
+</details>
+
+
+{{^values.employeeStatusData.photo}}
+<details role="group">
+    <summary role="button" aria-controls="details-content-1" aria-expanded="false">Why is the photograph not showing?</summary>
+    <div class="panel panel-border-narrow" id="details-content-1" aria-hidden="true">
+        <p>This service is in development, so photographs will not always be available.</p>
+    </div>
+</details>
+{{/values.employeeStatusData.photo}}
+
+
+
+<div class="no-padding block-space no-print">
+    <p>You can print a copy of this check and keep it for your records.</p>
+    <div id="js-print" class="no-js-hidden"><a class="button" href="javascript:doPrint();">Print this page</a></div>
+    <div><a class="block-space button-secondary" href="../check">Finish and leave service</a></div>
+</div>
+
+<script type="text/javascript">
+  function doPrint(){
+    // expand details boxes
+    var details = document.querySelectorAll('details');
+
+    Array.from(details).forEach(function(obj, idx) {
+      if(!obj.open === true){
+        obj.open = true;
+      }
+    });
+
+    window.print();
+  }
+
+  function removeClass(el, classNameToRemove){
+    var elClass = ' ' + el.className + ' ';
+    while(elClass.indexOf(' ' + classNameToRemove + ' ') !== -1){
+      elClass = elClass.replace(' ' + classNameToRemove + ' ', '');
+    }
+    el.className = elClass;
+  }
+
+  var active = document.querySelector(".no-js-hidden");
+  removeClass(active,"no-js-hidden");
+</script>

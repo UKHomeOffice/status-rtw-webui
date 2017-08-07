@@ -1,0 +1,15 @@
+{{<layout}}
+
+{{$content}}
+<div class="content">
+    <h1 class="heading-large">There's a problem with this service at the moment</h1>
+    <p>Please try again later.</p>
+    <p><a class="button" id="startAgain" href="../">Start again</a></p>
+</div>
+{{#showStack}}
+    <pre>
+        {{error.stack}}
+    </pre>
+{{/showStack}}
+{{/content}}
+{{/layout}}

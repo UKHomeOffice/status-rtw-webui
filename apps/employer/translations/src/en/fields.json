@@ -1,0 +1,27 @@
+{
+  "start": {
+    "info": "This service currently should only be used by:<ul class='list list-bullet'><li>organisations who have been invited to take part in our trial</li><li>people working for or applying for jobs with those organisations</li></ul><p>Using this service will not provide a statutory excuse from civil penalty - employers will still need to conduct <a href='https://www.gov.uk/check-job-applicant-right-to-work '>right to work checks</a>.",
+    "before-heading": "Before you start",
+    "need": "<p>You will need:</p> <ul class='list list-bullet'> <li>their Biometric Residence Permit (BRP) number</li> <li>your security code</li> <li>your company name</li> </ul>"
+  },
+  "employer-email": {
+    "label": "Employer's email address"
+  },
+  "applicant-brp": {
+    "label": "Biometric Residence Permit (BRP) number"
+  },
+  "authenticate": {
+    "label": "Ignore this field and move to the next question"
+  },
+  "access-code": {
+    "label": "Security code",
+    "hint": "The 4-digit number from your email, for example 8113"
+  },
+  "employee-name": {
+    "label": "Full name"
+  },
+  "company-name": {
+    "label": "Company name"
+  }
+}
+

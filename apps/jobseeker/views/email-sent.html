@@ -1,0 +1,20 @@
+{{<partials-page}}
+
+{{$page-content}}
+
+<div id="sentEmail" class="govuk-box-highlight-left confirm-page-left sent-email-step" role="group" aria-labelledby="confirmation-summary-heading" tabindex="-2" aria-live="polite">
+    <span class="hod-font-checkmark hod-checkmark move" aria-hidden="true"></span>
+    <h2 class="heading-medium">{{#t}}fields.email-sent.heading{{/t}}</h2>
+    <p>{{#t}}fields.email-sent.email-sent{{/t}}</p>
+    <h2 class="heading-medium">{{#t}}fields.email-sent.next-heading{{/t}}</h2>
+    <p>{{#t}}fields.email-sent.next-body{{/t}}</p>
+
+    <div>
+        <a class="button-secondary" href="../">Finish</a>
+    </div>
+
+</div>
+
+{{/page-content}}
+{{/partials-page}}
+

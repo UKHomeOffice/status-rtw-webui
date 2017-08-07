@@ -1,0 +1,69 @@
+{{<partials-page}}
+{{$headerClasses}}hidden{{/headerClasses}}
+{{$page-content}}
+
+{{^errorObj}}
+<h1 class="heading-large">An error has occurred</h1>
+<p>There's a problem with the details entered.</p>
+{{/errorObj}}
+
+{{#errorObj.authenticate}}
+<h1 class="heading-large">An error has occurred</h1>
+<p>There is a problem displaying this page - try again in a few minutes.</p>
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+{{/errorObj.authenticate}}
+
+{{#errorObj.cantfind}}
+<h1 class="heading-large">The details you entered don't match our records</h1>
+<p>Make sure you:</p>
+<ul class="list list-bullet">
+    <li>enter the Biometric Residence Permit (BRP) number exactly as it is written on the job applicant's card</li>
+    <li>use the 4-digit code from your email</li>
+</ul>
+
+
+<div><a class="button" id="startAgain" href="{{baseUrl}}">Start again</a></div>
+<h3 class="heading-medium">If the details match</h3>
+<p>This is a trial service. Contact the service team to report a problem.</p>
+<p>Email: <a href="mailto:right-to-work-trial@digital.homeoffice.gov.uk">right-to-work-trial@digital.homeoffice.gov.uk</a></p>
+{{/errorObj.cantfind}}
+
+
+{{#errorObj.brpCodeMismatch}}
+<h1 class="heading-large">The details entered don't match our records</h1>
+<div class="panel panel-border-narrow">
+    <h2 class="heading-small">Biometric Residence Permit (BRP) number</h2>
+    <p>{{errorDetails.brp}}</p>
+    <h2 class="heading-small">Security code</h2>
+    <p>{{errorDetails.securityCode}}</p>
+</div>
+<p>Make sure you:</p>
+<ul class="list-bullet">
+    <li>enter the Biometric Residence Permit (BRP) number exactly as it is written on the job applicant's card</li>
+    <li>use the 4-digit code from your email</li>
+</ul>
+<p class="block-space"><a class="button" href="{{baseUrl}}">Start again</a></p>
+{{/errorObj.brpCodeMismatch}}
+
+{{#errorObj.codeExpired}}
+<h1 class="heading-large">Your security code has expired</h1>
+<p>You will need to ask the job applicant to share their right to work information with you again.</p>
+<p><a href="https://www.gov.uk/">Back to GOV.UK</a></p>
+{{/errorObj.codeExpired}}
+
+{{#errorObj.attemptsLockout}}
+<h1 class="heading-large">Too many incorrect attempts</h1>
+<p>You entered incorrect details 5 times in a row.</p>
+<p>Wait 15 minutes before you try again.</p>
+<p><a href="https://www.gov.uk/">Back to GOV.UK</a></p>
+{{/errorObj.attemptsLockout}}
+
+
+{{#errorObj.statusChange}}
+<h1 class="heading-large">There's a problem</h1>
+<p>You will need to ask the job applicant to share their right to work information with you again.</p>
+<p><a href="https://www.gov.uk/">Back to GOV.UK</a></p>
+{{/errorObj.statusChange}}
+
+{{/page-content}}
+{{/partials-page}}

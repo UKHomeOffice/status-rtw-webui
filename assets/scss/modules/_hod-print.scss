@@ -1,0 +1,31 @@
+// Pattern: strictly for the paper
+
+@media print {
+  .print-picture {
+    float: left;
+    width: 100pt;
+    margin: 0 30pt 30pt 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+    visibility: visible !important;
+  }
+  .access-code {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  ol {
+    display: block;
+    list-style-type: none;
+  }
+  .circle {
+    margin-right: 10px;
+  }
+  .print-block {
+    padding: 20px !important;
+    border: 1px solid #000;
+  }
+}

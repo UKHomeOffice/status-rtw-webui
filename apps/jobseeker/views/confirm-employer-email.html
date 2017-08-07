@@ -1,0 +1,20 @@
+{{<partials-page}}
+
+{{$page-content}}
+
+<div class="confirmation-summary-step" role="group" aria-labelledby="confirmation-summary-heading" tabindex="-1" aria-live="polite">
+    <h2 class="form-label-bold confirmation-summary-heading" id="confirmation-summary-heading">Confirm employer's email address:</h2>
+
+    <ul class="confirmation-summary-list">
+        <li><span class="heading-medium">{{values.employer-email}}</span></li>
+    </ul>
+
+    <div class="block-space" style="margin-top: 20px;">
+        <input class="button" type="submit" value="{{#t}}buttons.send{{/t}}">
+        <p><a href="{{baseUrl}}/share-email">{{#t}}buttons.change{{/t}}</a></p>
+    </div>
+</div>
+
+{{/page-content}}
+{{/partials-page}}
+

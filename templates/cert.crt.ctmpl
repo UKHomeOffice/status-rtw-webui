@@ -1,0 +1,1 @@
+{{with printf "%s" (env "NGINX_SSL_CERT") | secret}}{{.Data.value | base64Decode}}{{end}}

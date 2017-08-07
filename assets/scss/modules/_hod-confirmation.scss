@@ -1,0 +1,329 @@
+/* Loops to check entered info or button actions */
+/* Confirmation */
+
+#sentAddressBold {
+  margin-bottom:2em;
+  display: block;
+}
+
+.confirmation-summary {
+  display: none;
+  border: 4px solid $green;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  padding: $gutter-half 10px;
+  word-wrap: break-word;
+
+  p {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+  @media screen and (max-width: 640px ) {
+    p {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  @include media(tablet) {
+    border: 5px solid $green;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding: $gutter-two-thirds $gutter-half $gutter-half;
+  }
+
+  @include ie-lte(6) {
+    zoom: 1;
+  }
+
+
+  .confirmation-summary-heading {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+
+  .confirmation-summary-list {
+    padding-left: 0;
+    padding-top: 15px;
+
+    li {
+      @include media(tablet) {
+        margin-bottom: 5px;
+      }
+    }
+    a {
+      color: $text-colour;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Sent email alert
+.sent-email-step {
+  word-wrap: break-word;
+  @media screen and (max-width: 640px ) {
+    .button-white {
+      margin-bottom: 10px;
+    }
+  }
+}// Sent email alert
+.sent-email {
+  display: none;
+  word-wrap: break-word;
+  @media screen and (max-width: 640px ) {
+    .button-white {
+      margin-bottom: 10px;
+    }
+  }
+}
+.sent-email-alert {
+  width: 100%;
+  padding: 10px;
+  background-color: $green;
+  color: $page-colour;
+  margin: 10px 0 10px 0;
+  clear: both;
+  font-weight: bold;
+  p {
+    margin: 1em;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sent-email-content {
+  width: 100%;
+  padding: 0px;
+  background-color: $page-colour;
+  color: $page-colour;
+  margin: 10px 0 10px 0;
+  clear: both;
+  font-weight: bold;
+  p {
+    margin: 1em;
+    a {
+      text-decoration: underline;
+      display: block;
+      padding-top: 20px;
+      &:hover {
+        color: $page-colour;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+// Update colour of GOV.UK default to meet accessibility
+.govuk-box-highlight {
+  padding: 1em 2em 2em;
+  background-color: $green;
+
+  a, a:hover, a:visited {
+    color: $text-colour;
+  }
+
+  p {
+    a, a:hover, a:visited {
+      color: $page-colour;
+    }
+  }
+
+  .button-secondary {
+    color: $text-colour;
+    &:hover, &:active, &:visited {
+      color: $text-colour;
+    }
+  }
+}
+
+// Checkmark icon styles, not included in .incomplete
+.confirm-page {
+  .hod-checkmark {
+    font-size: 35px;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    + .heading-large, + .heading-medium {
+      margin-top: 0;
+      line-height: 1;
+    }
+  }
+}
+
+
+// Update colour of GOV.UK default to meet accessibility
+.govuk-box-highlight-3 {
+  text-align: left;
+
+  a, a:hover, a:visited {
+    color: $text-colour;
+  }
+
+  p {
+    a, a:hover, a:visited {
+      color: $page-colour;
+    }
+  }
+
+  .button-secondary {
+    color: $text-colour;
+    &:hover, &:active, &:visited {
+      color: $text-colour;
+    }
+  }
+}
+
+// Checkmark icon styles, not included in .incomplete
+.confirm-page-3 {
+  .hod-checkmark {
+    color: $page-colour;
+    font-size: 35px;
+    display: inline-block;
+    margin: 15px auto;
+    position: relative;
+    background: $green;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    + .heading-large, + .heading-medium {
+      margin-top: 0;
+      line-height: 1;
+    }
+  }
+}
+
+// Update colour of GOV.UK default to meet accessibility
+.govuk-box-highlight-left {
+  padding: 1em 2em 2em;
+  background-color: $green;
+  text-align: left;
+  color: $page-colour;
+
+  a, a:hover, a:visited {
+    color: $text-colour;
+  }
+
+  p {
+    a, a:hover, a:visited {
+      color: $page-colour;
+    }
+  }
+
+  .button-secondary {
+    color: $text-colour;
+    &:hover, &:active, &:visited {
+      color: $text-colour;
+    }
+  }
+}
+
+// Checkmark icon styles, not included in .incomplete
+.confirm-page-left {
+  .hod-checkmark {
+    font-size: 35px;
+    display: inline-block;
+    margin: 15px auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    + .heading-large, + .heading-medium {
+      margin-top: 0;
+      line-height: 1;
+    }
+  }
+}
+
+
+// Confirmation page no-hide for use in js-rm-step
+
+.confirmation-summary-step {
+  border: 4px solid $green;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  padding: $gutter-half 10px;
+  word-wrap: break-word;
+
+  p {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+  @media screen and (max-width: 640px ) {
+    p {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  @include media(tablet) {
+    border: 5px solid $green;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding: $gutter-two-thirds $gutter-half $gutter-half;
+  }
+
+  @include ie-lte(6) {
+    zoom: 1;
+  }
+
+  .confirmation-summary-heading {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .confirmation-summary-list {
+    padding-left: 0;
+    padding-top: 15px;
+
+    li {
+      @include media(tablet) {
+        margin-bottom: 5px;
+      }
+    }
+    a {
+      color: $text-colour;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}

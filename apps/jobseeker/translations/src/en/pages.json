@@ -1,0 +1,29 @@
+{
+  "start": {
+    "header": "Prove your right to work to an employer"
+  },
+  "error": {
+    "header": "An error has occurred"
+  },
+  "privacy": {
+    "header": "Privacy policy"
+  },
+  "brp-number": {
+    "header": "Biometric Residence Permit (BRP) number"
+  },
+  "profile": {
+    "header": "Your right to work information"
+  },
+  "personal-details": {
+    "header": "Date of birth"
+  },
+  "share-email": {
+    "header": "Share with an employer"
+  },
+  "confirm-employer-email": {
+    "header": "Share with an employer"
+  },
+  "email-sent": {
+    "header": "Share with an employer"
+  }
+}

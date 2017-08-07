@@ -1,0 +1,325 @@
+{{<partials-page-large}}
+{{$headerClasses}}visually-hidden{{/headerClasses}}
+{{$page-content}}
+
+<div class="hod-status-block">
+    <div class="column-full no-padding">
+        {{#values.employeeStatusData.photo}}
+        <div class="column-one-third">
+            <img src="{{values.employeeStatusData.photo}}" alt="Photograph of job applicant">
+        </div>
+        {{/values.employeeStatusData.photo}}
+        {{^values.employeeStatusData.photo}}
+        <div class="column-one-third">
+            <img class="profile-image" src="../../public/images/silhouette.png"
+                 alt="Placeholder image – no photograph available" />
+        </div>
+        {{/values.employeeStatusData.photo}}
+        <div class="column-two-thirds">
+
+{{#values.employeeStatusData.WORK_UNRES_ILR}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>{{values.employeeStatusData.fullName}} can work in any job. There is no limit on how long {{values.employeeStatusData.pronoun}} can be in the UK.
+
+                {{#values.employeeStatusData.isCurtailed}}
+                    {{>partials-curtailment-message}}
+                {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-no-date}}
+                {{/values.employeeStatusData.WORK_UNRES_ILR}}
+
+
+{{#values.employeeStatusData.WORK_UNRES_TL}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>{{values.employeeStatusData.fullName}} can work in any job.
+
+                {{#values.employeeStatusData.isCurtailed}}
+                    {{>partials-curtailment-message}}
+                {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_UNRES_TL}}
+
+
+{{#values.employeeStatusData.WORK_RES_NO_DR}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} cannot work as a doctor or dentist in training.
+            <p>You can employ {{values.employeeStatusData.personalPronoun}} to do any other job.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_RES_NO_DR}}
+
+
+{{#values.employeeStatusData.WORK_RES_NO_SPORTS}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} cannot play or coach professional sports.
+            <p>You can employ {{values.employeeStatusData.personalPronoun}} to do any other job.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_RES_NO_SPORTS}}
+
+
+{{#values.employeeStatusData.WORK_RES_NO_DR_SPORTS}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} cannot:
+            <ul class="list list-bullet">
+                <li>work as a doctor or dentist in training</li>
+                <li>play or coach professional sports</li>
+            </ul>
+            <p>You can employ {{values.employeeStatusData.personalPronoun}} to do any other job.
+                {{#values.employeeStatusData.isCurtailed}}
+                    {{>partials-curtailment-message}}
+                {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_RES_NO_DR_SPORTS}}
+
+
+{{#values.employeeStatusData.WORK_RES_STU_10_HRS}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>{{values.employeeStatusData.fullName}} is on a student visa. {{values.employeeStatusData.pronounUpper}} can work:
+
+            <ul class="list list-bullet"><li>part time (up to 10 hours a week) in term time</li>
+                <li>full time in the holidays</li></ul>
+
+            <p>{{values.employeeStatusData.pronounUpper}} cannot:
+
+            <ul class="list list-bullet">
+                <li>work as a doctor or dentist in training – except on a recognised foundation course</li>
+                <li>work as an entertainer</li>
+                <li>play or coach professional sports</li>
+                <li>engage in business activity, such as being self-employed or running a business</li>
+            </ul>
+            <p>{{values.employeeStatusData.pronounUpper}} will need to show you a letter from {{values.employeeStatusData.possessivePronoun}} college or university to confirm {{values.employeeStatusData.possessivePronoun}} term dates.
+                {{#values.employeeStatusData.isCurtailed}}
+                    {{>partials-curtailment-message}}
+                {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_RES_STU_10_HRS}}
+
+
+{{#values.employeeStatusData.WORK_RES_STU_20_HRS}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>{{values.employeeStatusData.fullName}} is on a student visa. {{values.employeeStatusData.pronounUpper}} can work:
+            <ul class="list list-bullet"><li>part time (up to 20 hours a week) in term time</li>
+                <li>full time in the holidays</li></ul>
+            <p>{{values.employeeStatusData.pronounUpper}} cannot:
+            <ul class="list list-bullet"><li>work as a doctor or dentist in training – except on a recognised foundation course</li>
+                <li>work as an entertainer</li>
+                <li>play or coach professional sports</li>
+                <li>engage in business activity, such as being self-employed or running a business</li></ul>
+            <p>{{values.employeeStatusData.pronounUpper}} will need to show you a letter from {{values.employeeStatusData.possessivePronoun}} college or university to confirm {{values.employeeStatusData.possessivePronoun}} term dates.
+                {{#values.employeeStatusData.isCurtailed}}
+                    {{>partials-curtailment-message}}
+                {{/values.employeeStatusData.isCurtailed}}
+                {{>partials-status-next-date}}
+                {{/values.employeeStatusData.WORK_RES_STU_20_HRS}}
+
+
+{{#values.employeeStatusData.WORK_RES_STU_DES}}
+            <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+            <h3 class="heading-small">Details</h3>
+            <p>{{values.employeeStatusData.fullName}} is on a student visa. {{values.employeeStatusData.pronounUpper}} can work:
+            <ul class="list list-bullet"><li>part time (up to 20 hours a week) in term time</li>
+                <li>full time in the holidays</li></ul>
+            <p>{{values.employeeStatusData.pronounUpper}} cannot:
+            <ul class="list list-bullet"><li>work as a doctor or dentist in training – except on a recognised foundation course</li>
+                <li>work as an entertainer</li>
+                <li>play or coach professional sports</li>
+                <li>engage in business activity, such as being self-employed or running a business</li></ul>
+            <p>{{values.employeeStatusData.pronounUpper}} will need to show you a letter from {{values.employeeStatusData.possessivePronoun}} college or university to confirm {{values.employeeStatusData.possessivePronoun}} term dates.
+
+                <details role="group">
+                    <summary role="button" aria-controls="details-content-1" aria-expanded="false">When {{values.employeeStatusData.fullName}} finishes {{values.employeeStatusData.possessivePronoun}} course</summary>
+                    <div class="panel panel-border" id="details-content-1" aria-hidden="true">
+            <p>{{values.employeeStatusData.fullName}} can work full time in most jobs after {{values.employeeStatusData.pronoun}} successfully completes {{values.employeeStatusData.possessivePronoun}} course, but {{values.employeeStatusData.pronoun}} still cannot:</p>
+            <ul class="list list-bullet">
+                <li>work as a doctor or dentist in training</li>
+                <li>play or coach professional sports</li>
+            </ul>
+        </div>
+        </details>
+        {{#values.employeeStatusData.isCurtailed}}
+            {{>partials-curtailment-message}}
+        {{/values.employeeStatusData.isCurtailed}}
+        {{>partials-status-next-date}}
+        {{/values.employeeStatusData.WORK_RES_STU_DES}}
+
+
+{{#values.employeeStatusData.WORK_RES_SELF}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} can only work for {{values.employeeStatusData.possessivePronoun}} own business while {{values.employeeStatusData.pronoun}} is in the UK - {{values.employeeStatusData.pronoun}} cannot be employed.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_SELF}}
+
+
+{{#values.employeeStatusData.WORK_RES_SELF_NO_DR}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} can only work for {{values.employeeStatusData.possessivePronoun}} own business while {{values.employeeStatusData.pronoun}} is in the UK.
+        <p>{{values.employeeStatusData.pronounUpper}} cannot:
+
+        <ul class="list list-bullet"><li>be employed</li>
+            <li>work as a doctor or dentist in training</li></ul>
+        {{#values.employeeStatusData.isCurtailed}}
+            {{>partials-curtailment-message}}
+        {{/values.employeeStatusData.isCurtailed}}
+        {{>partials-status-next-date}}
+        {{/values.employeeStatusData.WORK_RES_SELF_NO_DR}}
+
+
+{{#values.employeeStatusData.WORK_RES_SELF_NO_SPORTS}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} can only work for {{values.employeeStatusData.possessivePronoun}} own business while {{values.employeeStatusData.pronoun}} is in the UK.
+
+        <p>{{values.employeeStatusData.pronounUpper}} cannot:
+
+        <ul class="list list-bullet"><li>be employed</li>
+            <li>play or coach professional sports</li></ul>
+        {{#values.employeeStatusData.isCurtailed}}
+            {{>partials-curtailment-message}}
+        {{/values.employeeStatusData.isCurtailed}}
+        {{>partials-status-next-date}}
+        {{/values.employeeStatusData.WORK_RES_SELF_NO_SPORTS}}
+
+
+{{#values.employeeStatusData.WORK_RES_SELF_NO_DR_SPORTS}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} can only work for {{values.employeeStatusData.possessivePronoun}} own business while {{values.employeeStatusData.pronoun}} is in the UK.
+
+        <p>{{values.employeeStatusData.pronounUpper}} cannot:
+
+        <ul class="list list-bullet"><li>be employed</li>
+            <li>work as a doctor or dentist in training</li>
+            <li>play or coach professional sports</li></ul>
+
+        {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+        {{/values.employeeStatusData.isCurtailed}}
+        {{>partials-status-next-date}}
+        {{/values.employeeStatusData.WORK_RES_SELF_NO_DR_SPORTS}}
+
+
+{{#values.employeeStatusData.WORK_RES_SPON_SGL}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} must work for {{values.employeeStatusData.possessivePronoun}} sponsor while {{values.employeeStatusData.pronoun}} is in the UK.
+        <p>{{values.employeeStatusData.pronounUpper}} can work part time (up to 20 hours a week) in another job if it is one of the following:
+
+        <ul class="list list-bullet"><li>the same role as {{values.employeeStatusData.possessivePronoun}} current job</li>
+            <li>on <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-k-shortage-occupation-list">the shortage occupation list</a></li></ul>
+
+        <p>Any part time work must be outside the hours {{values.employeeStatusData.fullName}} works for {{values.employeeStatusData.possessivePronoun}} sponsor.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_SPON_SGL}}
+
+
+{{#values.employeeStatusData.WORK_RES_SPON_DBL}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} must work for {{values.employeeStatusData.possessivePronoun}} sponsors while {{values.employeeStatusData.pronoun}} is in the UK.
+
+        <p>{{values.employeeStatusData.pronounUpper}} can work part time (up to 20 hours a week) in another job if it is one of the following:
+
+        <ul class="list list-bullet"><li>the same role as one of {{values.employeeStatusData.possessivePronoun}} current jobs</li>
+            <li>on <a href="https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-k-shortage-occupation-list">the shortage occupation list</a></li></ul>
+
+        <p>Any part time work must be outside the hours {{values.employeeStatusData.fullName}} works for {{values.employeeStatusData.possessivePronoun}} sponsors.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_SPON_DBL}}
+
+
+{{#values.employeeStatusData.WORK_RES_EMBASSY}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>{{values.employeeStatusData.fullName}} can only work for a foreign embassy while {{values.employeeStatusData.pronoun}} is in the UK.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_EMBASSY}}
+
+
+{{#values.employeeStatusData.WORK_RES_FORCES}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>{{values.employeeStatusData.fullName}} can only work for a foreign armed forces while {{values.employeeStatusData.pronoun}} is training in the UK.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_FORCES}}
+
+
+{{#values.employeeStatusData.WORK_RES_FORCES_BASE}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>{{values.employeeStatusData.fullName}} can only work on a military base for a foreign armed forces while {{values.employeeStatusData.pronoun}} is in the UK.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_FORCES_BASE}}
+
+
+{{#values.employeeStatusData.WORK_RES_ORG}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>{{values.employeeStatusData.fullName}} can only work for the employer written on {{values.employeeStatusData.possessivePronoun}} card while {{values.employeeStatusData.pronoun}} is in the UK.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_ORG}}
+
+
+{{#values.employeeStatusData.WORK_RES_SECTOR}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>On {{values.employeeStatusData.possessivePronoun}} current visa, {{values.employeeStatusData.fullName}} can only work in the occupation sector written on {{values.employeeStatusData.possessivePronoun}} card while {{values.employeeStatusData.pronoun}} is in the UK.
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_SECTOR}}
+
+
+{{#values.employeeStatusData.WORK_RES_OFFSHORE}}
+        <h2 class="heading-large">{{values.employeeStatusData.fullName}} can work in the UK until {{validUntilDisplay}}</h2>
+        <h3 class="heading-small">Details</h3>
+        <p>{{values.employeeStatusData.fullName}} can only work off-shore on a fixed installation, located at sea on the UK Continental Shelf (UKCS).
+            {{#values.employeeStatusData.isCurtailed}}
+                {{>partials-curtailment-message}}
+            {{/values.employeeStatusData.isCurtailed}}
+            {{>partials-status-next-date}}
+            {{/values.employeeStatusData.WORK_RES_OFFSHORE}}
+
+    </div>
+</div>
+
+</div>
+
+{{/page-content}}
+{{/partials-page-large}}
+
